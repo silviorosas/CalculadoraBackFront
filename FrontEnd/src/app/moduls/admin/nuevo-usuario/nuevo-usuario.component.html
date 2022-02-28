@@ -1,0 +1,7 @@
+<form [formGroup]="formsUsuario">
+  <input formControlName="nombre" type="text" name="" id="">
+  <span *ngIf="formsUsuario.hasError('required', 'nombre')" >No es valido</span>
+  <input formControlName="apellido" type="text" name="" id="">
+  <input (click)="BtnGuardar()" type="button" value="Guradar">
+</form>
+
