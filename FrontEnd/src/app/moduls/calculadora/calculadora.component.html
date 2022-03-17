@@ -4,16 +4,18 @@
   <div class="card text-center" style="width: 15rem; ">
 <div class="card-body bg-secondary  " style="border-radius: 5px;" >
 
+  <!--pantalla 1-->
 
-<!--pantalla-->
-<input   style="width: 100%; height:40px; font-size:18px; border-radius: 6px; " type="text" name="textboxnumeros"  [value]="res" ><br>
+  <div class="card-body bg-info  " style="border-radius: 5px;"><p *ngIf="datos.num1 > 0 && datos.num2 > 0 "> {{ datos.num1 }} {{ datos.op }} {{ datos.num2 }}  {{"= "+res}} </p> </div>
+ <!--pantalla 2-->
+<!--<input   style="width: 100%; height:40px; font-size:18px; border-radius: 6px; " type="text" name="textboxnumeros"  [value]="res"   ><br>-->
 <!--operadores-->
 <input class="btn btn-primary " type="button" value="+" (click)="ingresaroperacion('+')">
 <input class="btn btn-warning " style="margin: 4px"  type="button" value="-" (click)="ingresaroperacion('-')">
 <input class="btn btn-info " type="button" value="*" (click)="ingresaroperacion('*')">
 <input style="margin: 4px"  class="btn btn-success " type="button" value="/" (click)="ingresaroperacion('/')"><br>
 <!--numeros, igual, c y punto-->
-<input class="btn btn-dark " type="button" value="9" (click)="ingresarnumero(9)">
+<input class="btn btn-dark " type="button" value="9" (click)="ingresarnumero(9)" >
 <input style="margin: 4px"  class="btn btn-dark " type="button" value="8" (click)="ingresarnumero(8)">
 <input class="btn btn-dark " type="button" value="7" (click)="ingresarnumero(7)"><br>
 <input class="btn btn-dark " type="button" value="4" (click)="ingresarnumero(4)">
@@ -24,7 +26,7 @@
 <input class="btn btn-dark " type="button" value="3" (click)="ingresarnumero(3)"><br>
 <input class="btn btn-dark " type="button" value="0" (click)="ingresarnumero(0)">
 <input style="margin: 4px"  class="btn btn-dark " type="button" value="." >
-<input class="btn btn-dark " type="button" value="c" (click)="ingresaroperacion('c')">
+<input class="btn btn-dark " type="button" value="c" (click)="limpiar()">
 <input style="margin: 4px"  class="result btn btn-dark " type="button"  value="=" (click)="resultado()">
 
 </div>
